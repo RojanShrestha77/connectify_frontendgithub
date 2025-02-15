@@ -1,0 +1,23 @@
+/* Ensure the wrapper takes full height and centers its content */
+.registration-wrapper {
+    display: flex;
+    justify-content: center;  /* Horizontally center */
+    align-items: center;  /* Vertically center */
+    height: 100vh;  /* Full viewport height */
+    margin: 0;
+  }
+  
+  /* Outer container styles */
+  .registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 450px;
+    border: 1px solid #707070;  /* Soft grey border */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    text-align: center;
+    padding: 20px;  /* Some padding for the content */
+  }
+  
