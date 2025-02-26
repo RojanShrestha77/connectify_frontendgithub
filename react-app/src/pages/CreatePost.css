@@ -1,0 +1,124 @@
+/* Overlay to cover the entire screen */
+.createpost-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Wrapper for the post creation content */
+  .createpost-wrapper {
+    background-color: white;
+    border-radius: 16px;
+    width: 600px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* Header with close icon */
+  .createpost-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .close-link {
+    text-decoration: none;
+  }
+  
+  .close-icon {
+    cursor: pointer;
+    color: #000;
+    font-size: 25px; /* Matches your inline style */
+  }
+  
+  .close-icon:hover {
+    color: #555555; /* Slightly darker on hover */
+  }
+  
+  /* Content area with textarea and image preview */
+  .createpost-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  
+  /* Textarea styling */
+  .post-textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    padding: 8px;
+    min-height: 60px; /* Minimum height for empty textarea */
+  }
+  
+  .post-textarea::placeholder {
+    color: #657786;
+  }
+  
+  /* Image preview container */
+  .image-preview-container {
+    width: 100%;
+    max-width: 100%; /* Ensure it fits within the wrapper */
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-preview {
+    max-width: 100%; /* Fit within container width */
+    max-height: 300px; /* Limit height to avoid overflow */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure full image is visible without cropping */
+    border-radius: 8px; /* Match container */
+  }
+  
+  /* Actions area with upload and post buttons */
+  .createpost-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    border-top: 1px solid #e1e8ed;
+    padding-top: 12px;
+  }
+  
+  /* Upload button (Photo) */
+  .action-icon {
+    color: #1da1f2;
+    text-transform: none;
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+  
+  .action-icon:hover {
+    color: #1991db;
+  }
+  
+  /* Post button */
+  .post-button {
+    background-color: #1da1f2;
+    color: white;
+    border-radius: 20px;
+    text-transform: none;
+    font-weight: bold;
+    padding: 8px 16px;
+  }
+  
+  .post-button:hover {
+    background-color: #1991db;
+  }
