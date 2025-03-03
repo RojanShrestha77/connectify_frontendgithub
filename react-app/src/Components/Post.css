@@ -1,51 +1,81 @@
 html, body {
   height: 100%;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  overflow: hidden; /* Prevent scrolling on the entire page */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .post-feed {
-  width: 60%; /* Full width of the page */
+  width: 60%;
   height: 100vh;
   margin-left: 340px;
-  padding: 20px 0; /* Remove horizontal padding */
-  border-left: 1px solid #AAB8C2; /* Dark border */
-  border-right: 1px solid #AAB8C2; /* Dark border */
-  text-align: center; /* Center align content */
+  padding: 20px 0;
+  border-left: 1px solid #AAB8C2;
+  border-right: 1px solid #AAB8C2;
+  text-align: center;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-.post-feed h1{
+.post-feed h1 {
   text-align: center;
   margin-bottom: 0px;
-  margin-top:0px;
+  margin-top: 0px;
   font-size: 18px;
 }
 
+
 .divider {
-  width: 100%; /* Full width of the container */
-  border: 0; /* Remove default border */
-  border-top: 2px solid #AAB8C2; /* Add a custom border */
-  margin: 10px 0; /* Add some vertical margin */
+  width: 100%;
+  border: 0;
+  border-top: 2px solid #AAB8C2;
+  margin: 10px 0;
 }
 
+/* Post Card */
 .post-card {
-  margin-bottom: 20px;
-  padding: 15px;
-  border: #000000;
-  border-radius: 10px;
   background-color: #000000;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
+/* User Info Section */
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* Profile Picture */
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Username */
+.username-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-size: 14px;
+  color: gray;
+}
+
+/* Post Image */
 .image-container {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto; /* Center the container */
-  aspect-ratio: 1 / 1; /* Square aspect ratio (1:1) */
-  overflow: hidden; /* Hide overflow */
-  border-radius: 10px; /* Rounded corners */
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .post-image {
@@ -53,5 +83,24 @@ html, body {
   max-height: 80%;
   width: auto;
   height: auto;
-  object-fit: cover; /* Ensures the image fills the container */
+  object-fit: cover;
+}
+
+/* Post Content */
+
+
+.post-header  {
+  margin-left: 60px;
+}
+
+.post-nepal{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0%;
+  
+}
+
+.caption{
+  margin-left: 60px;
 }

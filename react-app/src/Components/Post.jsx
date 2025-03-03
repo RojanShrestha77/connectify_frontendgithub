@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Post.css";
+import ProfilePicture from "../assets/Images/profile_pic.png"; // Import the profile picture
 
 const Post = () => {
   const [posts, setPosts] = useState([]);
@@ -46,13 +47,24 @@ const Post = () => {
       ) : (
         posts.map((post) => (
           <div key={post.id} className="post-card">
-            <p>
-              <strong>
-                {post.User?.fullName || "Unknown User"} (@{post.User?.username || "unknown"})
-              </strong>
-              <br />
-              {post.content || "(No content)"}
-            </p>
+            {/* User Profile Section */}
+            <div className="post-header">
+              {/* Profile Picture */}
+              <img
+                src={ProfilePicture} // Static profile picture for now
+                alt="Profile"
+                className="profile-icon"
+              />
+              {/* User Name and Username */}
+              <div className="username-container">
+                <strong>{post.User?.fullName || "Unknown User"}</strong>
+                <span className="username">@{post.User?.username || "unknown"}</span>
+              </div>
+            </div>
+            <p className="caption">{post.content || "(No content)"}</p>
+
+
+            {/* Post Image */}
             {post.imageUrl && (
               <div className="image-container">
                 <img
@@ -64,10 +76,12 @@ const Post = () => {
                     e.target.onerror = null;
                     e.target.src = "https://placehold.co/150"; // Fallback
                   }}
-                  onLoad={() => console.log("Image loaded:", getImageUrl(post.imageUrl))}
                 />
               </div>
             )}
+
+            {/* Post Content */}
+           
           </div>
         ))
       )}
